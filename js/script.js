@@ -36,6 +36,17 @@ function handleButtonClick(button) {
         display.textContent = '0';
       }
       break;
+    case 'zero':
+      if (display.textContent === '0') {
+        display.textContent = buttonText;
+      } else {
+        display.textContent += buttonText;
+      }
+      break;
+    case 'point':
+      display.textContent += buttonText;
+      break;
+
     case 'equal':
       if (firstNumber !== null && operator !== null) {
         secondNumber = parseFloat(display.textContent);
